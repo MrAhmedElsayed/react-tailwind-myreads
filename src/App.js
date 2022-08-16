@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import mainPic from "./assets/images/book-shelf.jpg";
-import logo from "./assets/images/logo/logo.svg";
 import myReadsLogo from "./logo.png";
+import ExampleDropdown from "./DropD";
 
 const navigation = [
   { name: "Want To Read", href: "/no-where" },
@@ -141,7 +141,7 @@ export default function App() {
                       href="/no-where"
                       className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                     >
-                      Get started
+                      Explore 
                     </a>
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -157,789 +157,165 @@ export default function App() {
             </main>
           </div>
         </div>
+        
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            // src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
             src={mainPic}
             alt=""
           />
         </div>
       </div>
 
-      {/* team */}
+
+
+      {/* shelf section */}
       <section className="px-10 pt-20 pb-10 lg:pt-[120px] lg:pb-20">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto mb-[60px] max-w-[510px] text-center">
-                <span className="mb-2 block text-lg font-semibold text-primary">
-                  Our Team
-                </span>
-                <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">
-                  Our Awesome Team
+                <h2 className="mb-4 text-3xl font-bold text-indigo-600 sm:text-4xl md:text-[40px]" style={{fontFamily: 'EB Garamond'}}>
+                  Want To Read
                 </h2>
-                <p className="text-base text-body-color">
-                  There are many variations of passages of Lorem Ipsum available
-                  but the majority have suffered alteration in some form.
-                </p>
               </div>
             </div>
           </div>
 
           <div className="-mx-4 flex flex-wrap justify-center">
-            <div className="w-full px-4 md:w-1/2 xl:w-1/4">
-              <div className="mx-auto mb-10 w-full max-w-[370px]">
-                <div className="relative overflow-hidden rounded-lg">
+            
+            <div className="w-full px-3 sm:w-full md:w-1/4 xl:w-1/6">
+              <div className="mx-auto mb-10 w-full max-w-[360px]">
+                <div className="relative max-w-xs p-6 rounded-md border border-slate-300 hover:border-indigo-700 hover:border-2 text-gray-900 bg-gray-100">
                   <img
                     src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-                    alt="image"
-                    className="w-full"
+                    alt=""
+                    className="object-cover object-center w-full rounded-md h-50 bg-gray-500"
                   />
-                  <div className="absolute bottom-5 left-0 w-full text-center">
-                    <div className="relative mx-5 overflow-hidden rounded-lg bg-white py-5 px-3">
-                      <h3 className="text-base font-semibold text-dark">
-                        Coriss Ambady
-                      </h3>
-                      <p className="text-sm text-body-color">Web Developer</p>
-                      <div>
-                        <span className="absolute left-0 bottom-0">
-                          <svg
-                            width="61"
-                            height="30"
-                            viewBox="0 0 61 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="16"
-                              cy="45"
-                              r="45"
-                              fill="#13C296"
-                              fill-opacity="0.11"
-                            />
-                          </svg>
-                        </span>
-                        <span className="absolute top-0 right-0">
-                          <svg
-                            width="20"
-                            height="25"
-                            viewBox="0 0 20 25"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="0.706257"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 1.58989)"
-                              fill="#3056D3"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
+                  <div className="mt-6 mb-2">
+                    <span className="block text-xs font-medium tracking-widest uppercase text-violet-900">
+                      2012
+                    </span>
+                    <h2 className="text-xl font-semibold tracking-wide">
+                      The Linux Command Line
+                    </h2>
                   </div>
+                  <p className="text-gray-900">William E. Shotts, Jr.</p>
+                  <ExampleDropdown />
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 xl:w-1/4">
-              <div className="mx-auto mb-10 w-full max-w-[370px]">
-                <div className="relative overflow-hidden rounded-lg">
+
+            <div className="w-full px-3 sm:w-full md:w-1/4 xl:w-1/6">
+              <div className="mx-auto mb-10 w-full max-w-[360px]">
+                <div className="relative max-w-xs p-6 rounded-md border border-slate-300 hover:border-indigo-700 hover:border-2 hover:shadow-md text-gray-900 bg-gray-100">
                   <img
-                    src="http://books.google.com/books/content?id=sJf1vQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-                    alt="image"
-                    className="w-full"
+                    src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                    alt=""
+                    className="object-cover object-center w-full rounded-md h-50 bg-gray-500"
                   />
-                  <div className="absolute bottom-5 left-0 w-full text-center">
-                    <div className="relative mx-5 overflow-hidden rounded-lg bg-white py-5 px-3">
-                      <h3 className="text-base font-semibold text-dark">
-                        Glorius Cristian
-                      </h3>
-                      <p className="text-sm text-body-color">App Developer</p>
-                      <div>
-                        <span className="absolute left-0 bottom-0">
-                          <svg
-                            width="61"
-                            height="30"
-                            viewBox="0 0 61 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="16"
-                              cy="45"
-                              r="45"
-                              fill="#13C296"
-                              fill-opacity="0.11"
-                            />
-                          </svg>
-                        </span>
-                        <span className="absolute top-0 right-0">
-                          <svg
-                            width="20"
-                            height="25"
-                            viewBox="0 0 20 25"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="0.706257"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 1.58989)"
-                              fill="#3056D3"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
+                  <div className="mt-6 mb-2">
+                    <span className="block text-xs font-medium tracking-widest uppercase text-violet-900">
+                      2012
+                    </span>
+                    <h2 className="text-xl font-semibold tracking-wide">
+                      The Linux Command Line
+                    </h2>
                   </div>
+                  <p className="text-gray-900">William E. Shotts, Jr.</p>
+                  <ExampleDropdown />
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 xl:w-1/4">
-              <div className="mx-auto mb-10 w-full max-w-[370px]">
-                <div className="relative overflow-hidden rounded-lg">
+
+            <div className="w-full px-3 sm:w-full md:w-1/4 xl:w-1/6">
+              <div className="mx-auto mb-10 w-full max-w-[360px]">
+                <div className="relative max-w-xs p-6 rounded-md border border-slate-300 hover:border-indigo-700 hover:border-2 hover:shadow-md text-gray-900 bg-gray-100">
                   <img
-                    src="http://books.google.com/books/content?id=evuwdDLfAyYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                    alt="image"
-                    className="w-full"
+                    src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                    alt=""
+                    className="object-cover object-center w-full rounded-md h-50 bg-gray-500"
                   />
-                  <div className="absolute bottom-5 left-0 w-full text-center">
-                    <div className="relative mx-5 overflow-hidden rounded-lg bg-white py-5 px-3">
-                      <h3 className="text-base font-semibold text-dark">
-                        Jackie Sanders
-                      </h3>
-                      <p className="text-sm text-body-color">UI/UX Designer</p>
-                      <div>
-                        <span className="absolute left-0 bottom-0">
-                          <svg
-                            width="61"
-                            height="30"
-                            viewBox="0 0 61 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="16"
-                              cy="45"
-                              r="45"
-                              fill="#13C296"
-                              fill-opacity="0.11"
-                            />
-                          </svg>
-                        </span>
-                        <span className="absolute top-0 right-0">
-                          <svg
-                            width="20"
-                            height="25"
-                            viewBox="0 0 20 25"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="0.706257"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 1.58989)"
-                              fill="#3056D3"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
+                  <div className="mt-6 mb-2">
+                    <span className="block text-xs font-medium tracking-widest uppercase text-violet-900">
+                      2012
+                    </span>
+                    <h2 className="text-xl font-semibold tracking-wide">
+                      The Linux Command Line
+                    </h2>
                   </div>
+                  <p className="text-gray-900">William E. Shotts, Jr.</p>
+                  <ExampleDropdown />
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 xl:w-1/4">
-              <div className="mx-auto mb-10 w-full max-w-[370px]">
-                <div className="relative overflow-hidden rounded-lg">
+
+            <div className="w-full px-3 sm:w-full md:w-1/4 xl:w-1/6">
+              <div className="mx-auto mb-10 w-full max-w-[360px]">
+                <div className="relative max-w-xs p-6 rounded-md border border-slate-300 hover:border-indigo-700 hover:border-2 hover:shadow-md text-gray-900 bg-gray-100">
                   <img
-                    src="http://books.google.com/books/content?id=IOejDAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-                    alt="image"
-                    className="w-full"
+                    src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                    alt=""
+                    className="object-cover object-center w-full rounded-md h-50 bg-gray-500"
                   />
-                  <div className="absolute bottom-5 left-0 w-full text-center">
-                    <div className="relative mx-5 overflow-hidden rounded-lg bg-white py-5 px-3">
-                      <h3 className="text-base font-semibold text-dark">
-                        Nikolas Brooten
-                      </h3>
-                      <p className="text-sm text-body-color">Sales Manager</p>
-                      <div>
-                        <span className="absolute left-0 bottom-0">
-                          <svg
-                            width="61"
-                            height="30"
-                            viewBox="0 0 61 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="16"
-                              cy="45"
-                              r="45"
-                              fill="#13C296"
-                              fill-opacity="0.11"
-                            />
-                          </svg>
-                        </span>
-                        <span className="absolute top-0 right-0">
-                          <svg
-                            width="20"
-                            height="25"
-                            viewBox="0 0 20 25"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              cx="0.706257"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="24.3533"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 24.3533)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="18.6624"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 18.6624)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="12.9717"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 12.9717)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="7.28077"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 7.28077)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="0.706257"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 0.706257 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="6.39669"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 6.39669 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="12.0881"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 12.0881 1.58989)"
-                              fill="#3056D3"
-                            />
-                            <circle
-                              cx="17.7785"
-                              cy="1.58989"
-                              r="0.646687"
-                              transform="rotate(-90 17.7785 1.58989)"
-                              fill="#3056D3"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
+                  <div className="mt-6 mb-2">
+                    <span className="block text-xs font-medium tracking-widest uppercase text-violet-900">
+                      2012
+                    </span>
+                    <h2 className="text-xl font-semibold tracking-wide">
+                      The Linux Command Line
+                    </h2>
                   </div>
+                  <p className="text-gray-900">William E. Shotts, Jr.</p>
+                  <ExampleDropdown />
                 </div>
               </div>
             </div>
+
+            <div className="w-full px-3 sm:w-full md:w-1/4 xl:w-1/6">
+              <div className="mx-auto mb-10 w-full max-w-[360px]">
+                <div className="relative max-w-xs p-6 rounded-md border border-slate-300 hover:border-indigo-700 hover:border-2 hover:shadow-md text-gray-900 bg-gray-100">
+                  <img
+                    src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                    alt=""
+                    className="object-cover object-center w-full rounded-md h-50 bg-gray-500"
+                  />
+                  <div className="mt-6 mb-2">
+                    <span className="block text-xs font-medium tracking-widest uppercase text-violet-900">
+                      2012
+                    </span>
+                    <h2 className="text-xl font-semibold tracking-wide">
+                      The Linux Command Line
+                    </h2>
+                  </div>
+                  <p className="text-gray-900">William E. Shotts, Jr.</p>
+                  <ExampleDropdown />
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full px-3 sm:w-full md:w-1/4 xl:w-1/6">
+              <div className="mx-auto mb-10 w-full max-w-[360px]">
+                <div className="relative max-w-xs p-6 rounded-md border border-slate-300 hover:border-indigo-700 hover:border-2 hover:shadow-md text-gray-900 bg-gray-100">
+                  <img
+                    src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                    alt=""
+                    className="object-cover object-center w-full rounded-md h-50 bg-gray-500"
+                  />
+                  <div className="mt-6 mb-2">
+                    <span className="block text-xs font-medium tracking-widest uppercase text-violet-900">
+                      2012
+                    </span>
+                    <h2 className="text-xl font-semibold tracking-wide">
+                      The Linux Command Line
+                    </h2>
+                  </div>
+                  <p className="text-gray-900">William E. Shotts, Jr.</p>
+                  <ExampleDropdown />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -952,7 +328,7 @@ export default function App() {
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
               <div className="mb-10 w-full">
                 <a
-                  href="javascript:void(0)"
+                  href="/dummy"
                   className="mb-6 inline-block max-w-[160px]"
                 >
                   <img src={myReadsLogo} alt="logo" className="max-w-full" />
@@ -986,7 +362,7 @@ export default function App() {
                 <ul>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       SaaS Development
@@ -994,7 +370,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Our Products
@@ -1002,7 +378,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       User Flow
@@ -1010,7 +386,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       User Strategy
@@ -1027,7 +403,7 @@ export default function App() {
                 <ul>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       About TailGrids
@@ -1035,7 +411,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Contact & Support
@@ -1043,7 +419,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Success History
@@ -1051,7 +427,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Setting & Privacy
@@ -1068,7 +444,7 @@ export default function App() {
                 <ul>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Premium Support
@@ -1076,7 +452,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Our Services
@@ -1084,7 +460,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Know Our Team
@@ -1092,7 +468,7 @@ export default function App() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/dummy"
                       className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
                     >
                       Download App
@@ -1108,7 +484,7 @@ export default function App() {
                 </h4>
                 <div className="mb-6 flex items-center">
                   <a
-                    href="javascript:void(0)"
+                    href="/dummy"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] text-dark hover:border-primary hover:bg-primary hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
@@ -1121,7 +497,7 @@ export default function App() {
                     </svg>
                   </a>
                   <a
-                    href="javascript:void(0)"
+                    href="/dummy"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] text-dark hover:border-primary hover:bg-primary hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
@@ -1134,7 +510,7 @@ export default function App() {
                     </svg>
                   </a>
                   <a
-                    href="javascript:void(0)"
+                    href="/dummy"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] text-dark hover:border-primary hover:bg-primary hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
@@ -1147,7 +523,7 @@ export default function App() {
                     </svg>
                   </a>
                   <a
-                    href="javascript:void(0)"
+                    href="/dummy"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] text-dark hover:border-primary hover:bg-primary hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
@@ -1190,12 +566,13 @@ export default function App() {
                   y2="1.22829e-05"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#3056D3" stop-opacity="0.08" />
-                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                  <stop stopColor="#3056D3" stopOpacity="0.08" />
+                  <stop offset="1" stopColor="#C4C4C4" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
           </span>
+          
           <span className="absolute top-10 right-10 z-[-1]">
             <svg
               width="75"
@@ -1217,8 +594,8 @@ export default function App() {
                   y2="37.5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#13C296" stop-opacity="0.31" />
-                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                  <stop stopColor="#13C296" stopOpacity="0.31" />
+                  <stop offset="1" stopColor="#C4C4C4" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -1226,22 +603,22 @@ export default function App() {
         </div>
       </footer>
 
-      <div class="fixed bottom-5 right-5 w-full">
+      <div className="fixed bottom-0 right-5 w-full">
         <a
-          class="inline-block my-11 px-5 py-5 float-right text-indigo-700 bg-indigo-100 hover:bg-indigo-200  tracking-wide rounded-full focus:outline-none"
+          className="inline-block my-5 px-5 py-5 float-right text-indigo-700 bg-indigo-100 hover:bg-indigo-200 tracking-wide rounded-full focus:outline-none"
           href="/search"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            className="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            stroke-width="2"
+            strokeWidth="2"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
