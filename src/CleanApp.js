@@ -5,13 +5,13 @@ const App2 = () => {
       <HeroComp />
 
       {/* shelf want to read */}
-      <BookShelf shelfTitle={"Want To Read"} boosList={[1, 2, 3]} />
+      <BookShelf shelfTitle={"Want To Read"} bookList={[1, 2, 3]} />
 
       {/* shelf Currently Reading */}
-      <BookShelf shelfTitle={"Currently Reading"} boosList={[1, 2, 3]} />
+      <BookShelf shelfTitle={"Currently Reading"} bookList={[1, 2, 3]} />
 
       {/* shelf Read */}
-      <BookShelf shelfTitle={"shelf Read"} boosList={[1, 2, 3]} />
+      <BookShelf shelfTitle={"Read"} bookList={[1, 2, 3]} />
 
       {/* Footer */}
       <FooterComp />

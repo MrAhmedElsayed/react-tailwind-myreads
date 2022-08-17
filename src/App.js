@@ -319,7 +319,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      {/* team */}
+      {/* shelf section */}
 
       {/* <footer className="relative z-10 bg-white pt-20 pb-10 lg:pt-[120px] lg:pb-20"> */}
       <footer className="px-10 pt-20 pb-10 lg:pt-[120px] lg:pb-20">
