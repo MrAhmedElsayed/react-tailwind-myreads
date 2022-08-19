@@ -1,5 +1,7 @@
 import React from "react";
 import Shelf from "../components/Shelf";
+import FabFixedBtn from "../components/FabFixedBtn";
+
 
 const myBookList = [
   {
@@ -86,6 +88,10 @@ const SearchPage = () => {
         
       </div>
       <Shelf shelfTitle={"Result"} bookList={myBookList} />
+      <FabFixedBtn
+        btnHref={"/"}
+        btnColor={"text-indigo-700 bg-indigo-100 hover:bg-indigo-200"}
+      />
     </React.Fragment>
   );
 };
