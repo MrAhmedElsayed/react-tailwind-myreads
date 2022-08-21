@@ -31,7 +31,7 @@ const solutions = [
     href: '/',
     icon: CursorClickIcon,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
+  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '/', icon: ShieldCheckIcon },
   {
     name: 'Integrations',
     description: "Connect with third-party tools that you're already using.",
@@ -167,10 +167,10 @@ export default function Navbar() {
               )}
             </Popover>
 
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Pricing
             </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Docs
             </a>
 
@@ -233,7 +233,7 @@ export default function Navbar() {
                             </ul>
                           </div>
                           <div className="mt-5 text-sm">
-                            <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                            <a href="/" className="font-medium text-indigo-600 hover:text-indigo-500">
                               {' '}
                               View all posts <span aria-hidden="true">&rarr;</span>
                             </a>
@@ -247,11 +247,11 @@ export default function Navbar() {
             </Popover>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
               Sign in
             </a>
             <a
-              href="#"
+              href="/"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
             >
               Sign up
@@ -304,11 +304,11 @@ export default function Navbar() {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Pricing
                 </a>
 
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Docs
                 </a>
                 {resources.map((item) => (
@@ -323,14 +323,14 @@ export default function Navbar() {
               </div>
               <div>
                 <a
-                  href="#"
+                  href="/"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Sign up
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                  <a href="/" className="text-indigo-600 hover:text-indigo-500">
                     Sign in
                   </a>
                 </p>

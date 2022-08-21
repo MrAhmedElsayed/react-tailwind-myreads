@@ -208,6 +208,7 @@ const HomeView = () => {
   return (
     <React.Fragment>
       <Hero />
+
       <Shelf
         shelfTitle={"All Books"}
         bookList={booksList}
