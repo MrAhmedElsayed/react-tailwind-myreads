@@ -7,6 +7,23 @@ import FabFixedBtn from "../components/FabFixedBtn";
 
 // https://medium.com/bb-tutorials-and-thoughts/react-how-to-load-settings-data-from-the-server-before-initializing-an-app-515c25ee1f43
 
+
+/*            filter books by filter          */
+// const shelf1 = [{name: "name1", shelf: "a"}]
+
+// const shelf2 = [{name: "name2", shelf: "b"}]
+
+// const allBooks = [...shelf1, ...shelf2]
+
+// const bookFilter = (books) => (shelf) =>books.filter((b) => b.shelf === shelf);
+
+// const filterBy = bookFilter(allBooks);
+
+// const bookOnShelf = filterBy("b")
+
+// console.log(bookOnShelf)
+
+
 const booksList = [
   {
     title: "The Linux Command Line",
