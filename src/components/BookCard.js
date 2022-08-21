@@ -27,7 +27,7 @@ const BookCard = ({ bookObject }) => {
             </p>
           </div>
           {/* absolute pages count */}
-          <span className="flex flex-row absolute bottom-0 right-0 bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+          <span className="flex flex-row absolute top-0 right-0 bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"

@@ -2,11 +2,10 @@ import React from "react";
 import Hero from "../components/Hero.js";
 import Shelf from "../components/Shelf";
 import FabFixedBtn from "../components/FabFixedBtn";
-// import { getAll } from "../services/BooksAPI";
-// import { useEffect } from "react";
+import { getAll } from "../services/BooksAPI";
+import { useEffect, useState  } from "react";
 
 // https://medium.com/bb-tutorials-and-thoughts/react-how-to-load-settings-data-from-the-server-before-initializing-an-app-515c25ee1f43
-
 
 /*            filter books by filter          */
 // const shelf1 = [{name: "name1", shelf: "a"}]
@@ -14,15 +13,6 @@ import FabFixedBtn from "../components/FabFixedBtn";
 // const shelf2 = [{name: "name2", shelf: "b"}]
 
 // const allBooks = [...shelf1, ...shelf2]
-
-// const bookFilter = (books) => (shelf) =>books.filter((b) => b.shelf === shelf);
-
-// const filterBy = bookFilter(allBooks);
-
-// const bookOnShelf = filterBy("b")
-
-// console.log(bookOnShelf)
-
 
 const booksList = [
   {
@@ -203,38 +193,36 @@ const booksList = [
 ];
 
 const HomeView = () => {
-  let currentlyReadingShelf = [];
-  let wantToReadShelf = [];
-  let ReadShelf = [];
+  
+  const [currentlyReadingShelf, setCurrentlyReadingShelf] = useState([])
+  const [wantToReadShelf, setWantToReadShelf] = useState([])
+  const [ReadShelf, setReadShelf] = useState([])
 
-  // useEffect(() => {
-  //   getAll().then((books) => {
-  //     console.log(books);
-  //     currentlyReadingShelf = books.filter((element) => {
-  //       return element.shelf === "currentlyReading";
-  //     });
-  //     wantToReadShelf = books.filter((element) => {
-  //       return element.shelf === "wantToRead";
-  //     });
-  //     ReadShelf = books.filter((element) => {
-  //       return element.shelf === "read";
-  //     });
-  //   });
-  // }, []);
+  useEffect(() => {
+    getAll().then((books) => {
+      console.log(books);
+
+      const bookFilter = (booksList2) => (shelf) =>
+        booksList2.filter((b) => b.shelf === shelf);
+
+      const filterBy = bookFilter(books);
+
+      setCurrentlyReadingShelf(filterBy("currentlyReading"))
+      setWantToReadShelf(filterBy("wantToRead"))
+      setReadShelf(filterBy("read"))
+    });
+  }, []);
 
   return (
     <React.Fragment>
       <Hero />
 
       <Shelf
-        shelfTitle={"All Books"}
-        bookList={booksList}
-      />
-      <Shelf
         shelfTitle={"Currently Reading"}
         bookList={currentlyReadingShelf}
       />
       <Shelf shelfTitle={"Want To Read"} bookList={wantToReadShelf} />
+
       <Shelf shelfTitle={"Read"} bookList={ReadShelf} />
       <FabFixedBtn
         btnHref={"/search"}

@@ -17,7 +17,7 @@ const SelectShelfList = ({bookShelf}) => {
     const [selected, setSelected] = useState(bookStatus[0]);
 
   return (
-    <div className="absolute top-2 right-2 w-40">
+    <div className="absolute top-0 left-0 w-40">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
           <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
