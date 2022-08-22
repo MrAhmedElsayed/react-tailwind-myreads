@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
+import { CheckIcon } from "@heroicons/react/solid";
+import { update } from "../services/BooksAPI";
 
 const bookStatus = [
   { status: "Want To Read", value: "wantToRead" },
@@ -9,25 +10,34 @@ const bookStatus = [
   { status: "Read", value: "read" },
 ];
 
-const SelectShelfList = ({bookShelf}) => {
-    
-    const selectedShelf = bookStatus.map(st => st.value === bookShelf)
-    console.log(selectedShelf)
- 
-    const [selected, setSelected] = useState(bookStatus[0]);
+// const getFruit = fruits.find(fruit => fruit.name === 'apples');
+
+const SelectShelfList = ({ book, bookShelf }) => {
+  useEffect(() => {
+    update(book, bookShelf).then((res) => console.log(res));
+  });
+
+  const [selected, setSelected] = useState(bookStatus[0]);
 
   return (
-    <div className="absolute top-0 left-0 w-40">
-      <Listbox value={selected} onChange={setSelected}>
+    // <div >
+      <Listbox value={selected} onChange={setSelected} className="absolute top-0 right-0 w-40">
         <div className="relative mt-1">
-          <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
-            <span className="block truncate">{selected.status}</span>
-            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-              <SelectorIcon
-                className="h-5 w-5 text-gray-400"
-                aria-hidden="true"
+          <Listbox.Button className="inline-flex w-full justify-center rounded-md bg-indigo-600 bg-opacity-20 px-4 py-2 text-sm font-medium text-indigo-600 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 10h16M4 14h16M4 18h16"
               />
-            </span>
+            </svg>
           </Listbox.Button>
           <Transition
             as={Fragment}
@@ -68,7 +78,7 @@ const SelectShelfList = ({bookShelf}) => {
           </Transition>
         </div>
       </Listbox>
-    </div>
+    // </div>
   );
 };
 
