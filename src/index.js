@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeView from './views/Home';
 import SearchPage from './views/Search';
 import NotFound from './views/NotFound';
+import SignIn from './views/SignIn';
+
 
 
 
@@ -17,6 +19,7 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<HomeView />} />
         <Route path="search" element={<SearchPage />} />
+        <Route path='sign-in' element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

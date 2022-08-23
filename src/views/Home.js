@@ -27,10 +27,7 @@ const HomeView = () => {
     <React.Fragment>
       <Hero />
 
-      <Shelf
-        shelfTitle={"Currently Reading"}
-        bookList={currentlyReadingShelf}
-      />
+      <Shelf shelfTitle={"Currently Reading"} bookList={currentlyReadingShelf} />
 
       <Shelf shelfTitle={"Want To Read"} bookList={wantToReadShelf} />
 

@@ -1,5 +1,10 @@
+// import { useState } from "react";
+
 const FabFixedBtn = ({ btnHref, btnColor }) => {
-  let classNameVar = btnColor +"inline-block my-5 px-5 py-5 float-right tracking-wide rounded-full focus:outline-none";
+  // how to add color for every button
+  let classNameVar =
+    btnColor +
+    "inline-block my-5 px-5 py-5 float-right tracking-wide rounded-full focus:outline-none";
 
   return (
     <div className="fixed bottom-0 right-5 w-full">
@@ -11,7 +16,7 @@ const FabFixedBtn = ({ btnHref, btnColor }) => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth={2}
+            strokeWidth="2"
           >
             <path
               strokeLinecap="round"
@@ -26,7 +31,7 @@ const FabFixedBtn = ({ btnHref, btnColor }) => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth={2}
+            strokeWidth="2"
           >
             <path
               strokeLinecap="round"

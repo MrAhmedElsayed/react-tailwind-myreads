@@ -1,7 +1,8 @@
-import React, { useEffect, Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 import { CheckIcon } from "@heroicons/react/solid";
 import { Listbox, Transition } from "@headlessui/react";
 import { update } from "../services/BooksAPI";
+// import Toast from "./Toast";
 
 const bookStatus = [
   { title: "Want To Read", value: "wantToRead" },
@@ -11,13 +12,10 @@ const bookStatus = [
 
 const BookCard = ({ bookObject }) => {
   const [selected, setSelected] = useState(bookObject.shelf);
-
-  function getShelf(e) {
-    update(bookObject, e)
-    .then(res => {
-      setSelected(e);
-    })
-  }
+  const getShelf = (event) => {
+    console.log(event)
+    update(bookObject, event).then((res) => setSelected(event));
+  };
 
   return (
     <React.Fragment>
